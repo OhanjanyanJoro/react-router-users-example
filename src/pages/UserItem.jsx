@@ -35,7 +35,7 @@ export default function UsersItem(){
             !isLaoding && (
                     user ? (
                     <h1>user ID: {user.id},  user Name: {user.name}</h1>
-                ) : 'user Not Found'
+                ) : 'User Not Found'
             )
         }
     </div>
