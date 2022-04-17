@@ -8,8 +8,25 @@ export default function Navbar() {
         <header>
             <nav>
                 <ul className={classes['navbar-list']}>
-                    <li><NavLink to="/welcome" activeClassName={classes.active}>Welcome</NavLink></li>
-                    <li><NavLink to="/users" activeClassName={classes.active}>users</NavLink></li>
+                    <li>
+                        <NavLink 
+                            to="/welcome"
+                            // react router dom v5
+                            // activeClassName={classes.active}
+
+                            // react router dom v6
+                            className={(navData) => navData.isActive ? classes.active : ''}
+                        >
+                            Welcome
+                        </NavLink></li>
+                    <li>
+                        <NavLink
+                            to="/users"
+                            //activeClassName={classes.active}
+                            className={(navData) => navData.isActive ? classes.active : ''}
+                        >
+                            users
+                        </NavLink></li>
                 </ul>
             </nav>
         </header>
